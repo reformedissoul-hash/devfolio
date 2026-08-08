@@ -3,8 +3,8 @@
 ## 📊 Project Information
 
 - **Project Name**: `devfolio`
-- **Generated On**: 2026-08-08 03:34:03 (Asia/Calcutta / GMT+06:30)
-- **Total Files Processed**: 29
+- **Generated On**: 2026-08-08 04:50:08 (Asia/Calcutta / GMT+06:30)
+- **Total Files Processed**: 30
 - **Export Tool**: Easy Whole Project to Single Text File for LLMs v1.1.0
 - **Tool Author**: Jota / José Guilherme Pandolfi
 
@@ -50,9 +50,10 @@
 │   └── 📄 main.jsx (234 B)
 ├── 📄 index.html (2.54 KB)
 ├── 📄 package-lock.json (89.09 KB)
-├── 📄 package.json (498 B)
+├── 📄 package.json (594 B)
 ├── 📄 postcss.config.js (80 B)
 ├── 📄 tailwind.config.js (2.85 KB)
+├── 📄 vercel.json (104 B)
 └── 📄 vite.config.js (166 B)
 ```
 
@@ -87,6 +88,7 @@
 - [📄 package.json](#📄-package-json)
 - [📄 postcss.config.js](#📄-postcss-config-js)
 - [📄 tailwind.config.js](#📄-tailwind-config-js)
+- [📄 vercel.json](#📄-vercel-json)
 - [📄 vite.config.js](#📄-vite-config-js)
 
 ---
@@ -95,11 +97,11 @@
 
 | Metric | Count |
 |--------|-------|
-| Total Files | 29 |
+| Total Files | 30 |
 | Total Directories | 5 |
-| Text Files | 28 |
+| Text Files | 29 |
 | Binary Files | 1 |
-| Total Size | 176.55 KB |
+| Total Size | 176.75 KB |
 
 ### 📄 File Types Distribution
 
@@ -107,7 +109,7 @@
 |-----------|-------|
 | `.jsx` | 18 |
 | `.js` | 6 |
-| `.json` | 2 |
+| `.json` | 3 |
 | `.svg` | 1 |
 | `.css` | 1 |
 | `.html` | 1 |
@@ -2902,7 +2904,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 - **Location**: `package-lock.json`
 - **Relative Path**: `root`
 - **Created**: 2026-08-08 03:29:15 (Asia/Calcutta / GMT+06:30)
-- **Modified**: 2026-08-08 03:29:15 (Asia/Calcutta / GMT+06:30)
+- **Modified**: 2026-08-08 04:47:42 (Asia/Calcutta / GMT+06:30)
 - **MD5**: `16e2697f59de4d237af8ff77dcbe4175`
 - **SHA256**: `34825b0bcc92ce6588bb08ec5aba88d40a7819413b2f4bb67ee540ea7cf5b02a`
 - **Encoding**: ASCII
@@ -5665,15 +5667,15 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 ### <a id="📄-package-json"></a>📄 `package.json`
 
 **File Info:**
-- **Size**: 498 B
+- **Size**: 594 B
 - **Extension**: `.json`
 - **Language**: `json`
 - **Location**: `package.json`
 - **Relative Path**: `root`
 - **Created**: 2026-08-07 21:44:48 (Asia/Calcutta / GMT+06:30)
-- **Modified**: 2026-08-07 21:44:48 (Asia/Calcutta / GMT+06:30)
-- **MD5**: `16d1fcca545aa400b383d9e65e891941`
-- **SHA256**: `5926344d46146cde4060e5edb3b776bcdf987df7336fa11f3b69d05506281b8c`
+- **Modified**: 2026-08-08 04:50:04 (Asia/Calcutta / GMT+06:30)
+- **MD5**: `c95424e42b8f2447dc4e262d19191ef4`
+- **SHA256**: `312c354f0bc52c4a99c3eda4194f83365fe44198237bf5a1ef147ac898e69f94`
 - **Encoding**: ASCII
 
 **File code content:**
@@ -5685,9 +5687,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "dev": "node ./node_modules/vite/bin/vite.js",
+    "build": "node ./node_modules/vite/bin/vite.js build",
+    "preview": "node ./node_modules/vite/bin/vite.js preview"
   },
   "dependencies": {
     "react": "^18.3.1",
@@ -5840,6 +5842,36 @@ export default {
     },
   },
   plugins: [],
+}
+
+```
+
+---
+
+### <a id="📄-vercel-json"></a>📄 `vercel.json`
+
+**File Info:**
+- **Size**: 104 B
+- **Extension**: `.json`
+- **Language**: `json`
+- **Location**: `vercel.json`
+- **Relative Path**: `root`
+- **Created**: 2026-08-08 04:50:06 (Asia/Calcutta / GMT+06:30)
+- **Modified**: 2026-08-08 04:50:07 (Asia/Calcutta / GMT+06:30)
+- **MD5**: `0db7ccb3aff36e97aa469126e9e17f99`
+- **SHA256**: `5412a89840980ad76ef4adc8e2c6eb8873f7917488f44c206690d10f257988de`
+- **Encoding**: ASCII
+
+**File code content:**
+
+```json
+{
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
 }
 
 ```
