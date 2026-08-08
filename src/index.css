@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+html {
+  scroll-padding-top: 88px;
+}
+
+body {
+  background-color: #0a0e14;
+  color: #e8eaf0;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: #6366f1;
+  color: #fff;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0e14;
+}
+::-webkit-scrollbar-thumb {
+  background: #2e3448;
+  border-radius: 8px;
+  border: 2px solid #0a0e14;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #6366f1;
+}
+
+/* Focus visibility for accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+summary:focus-visible {
+  outline: 2px solid #22d3ee;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@layer components {
+  .glass {
+    background: rgba(18, 22, 31, 0.55);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(139, 146, 165, 0.12);
+  }
+
+  .glass-strong {
+    background: rgba(18, 22, 31, 0.85);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(139, 146, 165, 0.14);
+  }
+
+  .text-gradient {
+    background: linear-gradient(100deg, #6366f1 0%, #a855f7 55%, #22d3ee 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .border-gradient {
+    position: relative;
+    border: 1px solid transparent;
+    background:
+      linear-gradient(#12161f, #12161f) padding-box,
+      linear-gradient(135deg, rgba(99, 102, 241, 0.5), rgba(34, 211, 238, 0.3)) border-box;
+  }
+
+  .section-eyebrow {
+    @apply inline-flex items-center gap-2 font-mono text-xs tracking-[0.2em] uppercase text-signal-cyan;
+  }
+
+  .btn-primary {
+    @apply relative inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-signal-indigo to-signal-violet px-7 py-3.5 font-display font-medium text-white transition-all duration-300 hover:shadow-glow hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-mist-700/60 bg-ink-800/50 px-7 py-3.5 font-display font-medium text-mist-100 backdrop-blur-sm transition-all duration-300 hover:border-signal-cyan/50 hover:bg-ink-700/60 hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  .card-surface {
+    @apply rounded-2xl border border-mist-700/20 bg-ink-800/60 backdrop-blur-sm;
+  }
+
+  .glow-orb {
+    filter: blur(90px);
+    pointer-events: none;
+  }
+}
+
+@layer utilities {
+  .mask-fade-right {
+    mask-image: linear-gradient(to right, black 85%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, black 85%, transparent 100%);
+  }
+}
